@@ -221,6 +221,7 @@ class Tests {
         assertTrue(hasDifferentDigits(54))
         assertTrue(hasDifferentDigits(222266666))
         assertFalse(hasDifferentDigits(0))
+        assertFalse(hasDifferentDigits(1))
         assertFalse(hasDifferentDigits(777))
         assertTrue(hasDifferentDigits(31122))
     }
@@ -228,6 +229,7 @@ class Tests {
     @Test
     @Tag("Hard")
     fun squareSequenceDigit() {
+        assertEquals(0, squareSequenceDigit(183395))
         assertEquals(1, squareSequenceDigit(1))
         assertEquals(4, squareSequenceDigit(2))
         assertEquals(5, squareSequenceDigit(7))
