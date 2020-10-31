@@ -299,6 +299,10 @@ class Tests {
     fun findSumOfTwo() {
         assertEquals(
             Pair(-1, -1),
+            findSumOfTwo(listOf(0, 24558, 0, 40700), 64166)
+        )
+        assertEquals(
+            Pair(-1, -1),
             findSumOfTwo(emptyList(), 1)
         )
         assertEquals(
@@ -326,6 +330,20 @@ class Tests {
             bagPacking(
                 mapOf("Кубок" to (500 to 2000), "Слиток" to (1000 to 5000)),
                 450
+            )
+        )
+        assertEquals(
+            setOf("Слиток"),
+            bagPacking(
+                mapOf("Кубок" to (500 to 2000), "Слиток" to (1000 to 5000)),
+                1100
+            )
+        )
+        assertEquals(
+            setOf("Слиток", "Кубок"),
+            bagPacking(
+                mapOf("Кубок" to (500 to 2000), "Слиток" to (1000 to 5000)),
+                1500
             )
         )
     }

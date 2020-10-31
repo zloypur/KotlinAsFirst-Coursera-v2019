@@ -114,12 +114,14 @@ class Tests {
     fun mostExpensive() {
         assertEquals("", mostExpensive(""))
         assertEquals("Курица", mostExpensive("Хлеб 39.9; Молоко 62.5; Курица 184.0; Конфеты 89.9"))
+        assertEquals("", mostExpensive("Молоко 62.5Хлеб 39.9; Молоко 62.5; Курица 184.0; Конфеты 89.9"))
         assertEquals("Вино", mostExpensive("Вино 255.0"))
     }
 
     @Test
     @Tag("Hard")
     fun fromRoman() {
+        assertEquals(654, fromRoman("DCLIV"))
         assertEquals(1, fromRoman("I"))
         assertEquals(3000, fromRoman("MMM"))
         assertEquals(1978, fromRoman("MCMLXXVIII"))
