@@ -294,7 +294,7 @@ Basic, Ruby, Swift.
                     """.trimIndent().replace(Regex("[\\s\\n\\t]"), "")
         assertEquals(expected, result)
 
-        File("temp.html").delete()
+//        File("temp.html").delete()
     }
 
     @Test
